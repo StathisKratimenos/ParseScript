@@ -55,7 +55,7 @@ def update_section(line, current_section, current_metric_group, detailed_metrics
 
 # Function to parse the Query Execution Summary section
 def parse_query_execution_summary(line, query_exec_summary):
-    match = re.search(r'([\w\s]+?)\s+([\d.]+)s', line)
+    match = re.search(r'([\w\s\(\)]+?)\s+([\d.]+)s', line)
     if match:
         operation = match.group(1).strip()
         duration = float(match.group(2))
