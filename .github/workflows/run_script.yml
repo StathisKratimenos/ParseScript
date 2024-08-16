@@ -30,7 +30,7 @@ jobs:
         python parse_script2.py
 
     - name: Upload Results
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v4
       with:
         name: script-result
         path: combined_results2.json
