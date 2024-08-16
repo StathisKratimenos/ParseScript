@@ -94,4 +94,4 @@ def parse_detailed_metrics(line, current_metric_group, detailed_metrics):
 
 
 # Run the parser with the provided file path
-parse_beeline_log(r'C:\Users\Admin\PycharmProjects\pythonProject\beeline_consent_query_stderr.txt')
+parse_beeline_log(r'beeline_consent_query_stderr.txt')
