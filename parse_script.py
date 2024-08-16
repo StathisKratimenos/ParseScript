@@ -34,7 +34,7 @@ def parse_beeline_log(file_path):
         "Detailed Metrics": detailed_metrics
     }
 
-    with open('combined_results2.json', 'w') as f:
+    with open('combined_results.json', 'w') as f:
         json.dump(combined_res, f, indent=4)
 
 

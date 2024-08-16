@@ -27,12 +27,12 @@ jobs:
 
     - name: Run Python Script
       run: |
-        python parse_script2.py
+        python parse_script.py
 
     - name: Upload Results
       uses: actions/upload-artifact@v4
       with:
         name: script-result
-        path: combined_results2.json
+        path: combined_results.json
 
 
