@@ -33,6 +33,6 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: script-result
-        path: combined_results.json
+        path: query_execution_summary.json, task_execution_summary.json, detailed_metrics.json
 
 

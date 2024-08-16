@@ -27,15 +27,15 @@ def parse_beeline_log(file_path):
                 parse_detailed_metrics(line, current_metric_group, detailed_metrics)
 
 
-    # Combine results and write to file
-    combined_res = {
-        "Query Execution Summary": query_exec_summary,
-        "Task Execution Summary": task_exec_summary,
-        "Detailed Metrics": detailed_metrics
-    }
+    # Writing the results into separate files
+    with open('query_execution_summary.json', 'w') as f:
+        f.write(str(json.dumps(query_exec_summary)))
 
-    with open('combined_results.json', 'w') as f:
-        json.dump(combined_res, f, indent=4)
+    with open('task_execution_summary.json', 'w') as f:
+        f.write(str(json.dumps(task_exec_summary, indent=4)))
+
+    with open('detailed_metrics.json', 'w') as f:
+        f.write(str(json.dumps(detailed_metrics, indent=4)))
 
 
 # Function to update the section and handle section transitions
