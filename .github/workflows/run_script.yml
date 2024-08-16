@@ -28,7 +28,7 @@ jobs:
     - name: Run Python Script
       run: |
         python parse_script2.py
-      uses: actions/upload-artifact@v4
+    - uses: actions/upload-artifact@v4
       with:
         name: Outputs
         path: ./output
